@@ -1,0 +1,5 @@
+var arr=[[1,2,3,4,5],Bob={sex:"male",Tel:"13684041950",QQ:"553990472"}]
+arr[0][0]=9
+arr.push(6)
+arr.splice(2,1)
+Bob.weight=130

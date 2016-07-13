@@ -1,0 +1,49 @@
+<html>
+<head>
+
+</head>
+<body>
+<script>
+  var divobj={width:"200px",height:"200px",src:"1.jpg",background:"gray",border:"1px red solid",left:"50px",top:"50px"};
+	 divobj.src=prompt("你要显示哪个图片","1.jpg");
+	 divobj.width=prompt("图片要多宽","200px");
+	 divobj.height=prompt("图片要多高","200px");
+     divobj.background=prompt("图片背景颜色","gray");
+	 divobj.border=prompt("图片边框","1px red solid");
+	 divobj.left=prompt("图片向右移动","50px");
+	 divobj.top=prompt("图片向下移动","50px");
+
+  var div=document.createElement('div');
+     div.src=divobj.src;
+	 div.style.width=divobj.width;
+	 div.style.height=divobj.height;
+	 div.style.background=divobj.background;
+	 div.style.border=divobj.border;
+	 div.style.position="absolute";
+	 div.style.left=divobj.left;
+	 div.style.top=divobj.top;
+	 document.body.appendChild(div);
+  var div=document.createElement('div');
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   </script>
+</body>	
+</html>
+   
+  
