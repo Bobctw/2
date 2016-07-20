@@ -1,20 +1,20 @@
 <html>
 <head>
 <script>
-var N=prompt("请输入****数列的长度值","N");
+var N=prompt("请输入****数列的长度值","2");
 N=parseInt(N);
-var s=0;
+var s=2;
 if(N>1)
 {
 var a =1;
 var b =1;
 var arr =[a,b];
-	for(var i=0;i<(N-2);i++)
+    for(var i=0;i<(N-2);i++)
     {
-		var c =a+b;
-		a=b;
-		b=c;
-		arr.push(c);
+        var c =a+b;
+        a=b;
+        b=c;
+        arr.push(c);
     }
 	
 	for(var s=0;s<N;s++)
@@ -22,7 +22,6 @@ var arr =[a,b];
 		s=s+arr[i];
 		document.write(s);
     }
-    
 }	
 </script>
 </head>	
