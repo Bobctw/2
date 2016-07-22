@@ -1,4 +1,4 @@
-<html>
+﻿<html>
 <head>
 <script>
 var arr =[[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0]];
@@ -13,22 +13,23 @@ for(var i=0;i<arr.length;i++)
 {
     document.write(arr[i].toString()+"<br/>");
 }
-function neighbours(x,y){
-var count = 0;
-        for(var m=-1;m<=1;m++)
+function neighbours(x,y)
+{
+    var count = 0;
+    for(var m=-1;m<=1;m++)
+	{
+		for(var n=-1;n<=1;n++)
 		{
-		    for(var n=-1;n<=1;n++)
+			if(m!=0||n!=0)
 			{
-			    if(m!=0||n!=0)
+				if(x+m>=0 && y+n>=0 && x+m<arr.length && y+n<arr[x+m].length)
 				{
-				   if(x+m>=0 && y+n>=0 && x+m<arr.length && y+n<arr[x+m].length)
-				   {
-				    if(arr[x+m][y+n]==1)
-				    count++;
-				   }
-                }
+                if(arr[x+m][y+n]==1)
+                    count++;
+				}
             }
         }
+    }
     return count;
 }
 var born = [];
@@ -51,8 +52,8 @@ for(var i=0;i<arr.length;i++)
 {
     for(var j = 0;j<arr[i].length;j++) 
 	{
-        if(neighbours(i,j)<=1&&arr[i][j]==1)
-            die.push([i,j]);
+    if(neighbours(i,j)<=1&&arr[i][j]==1)
+        die.push([i,j]);
 	}
 }
 for(var i=0;i<die.length;i++)

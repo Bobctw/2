@@ -1,0 +1,27 @@
+<html>
+<head>
+<script>
+function isenough(y1,y2)
+{
+    return Math.abs(y1-y2)<0.00000001;
+}
+function get_next(x,y)
+{
+    return (2*y+(x/(y*y)))/3;
+}
+function sqrt(x)
+{   
+    var y=1;
+    while(true)
+    {
+        var y1 = get_next(x,y);
+        if(isenough(y,y1))
+            break;
+        y=y1;
+    }
+    return y;
+}
+sqrt(3);
+</script>
+</head>	
+</html>
